@@ -4,10 +4,7 @@ package com.example.user.entity;
 import java.util.Date;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -34,6 +31,9 @@ public class User {
     @Column(nullable = false)
     private Boolean admin;
 
+    @Transient
+    private String token;
+
     public User() {
         this.createDate = new Date();
     }
@@ -45,6 +45,14 @@ public class User {
         this.email = email;
         this.createDate = new Date();
         this.admin = admin;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public String getLogin() {

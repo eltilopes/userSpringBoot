@@ -57,6 +57,14 @@ class UserController {
         }
         return user;
     }
+    @PostMapping(value = "/token")
+    User getToken(@RequestBody User userLogin) {
+        userLogin = repository.findByLoginAndPassword(userLogin.getLogin(), userLogin.getPassword());
+        if(ObjectUtil.isNullOrEmty(userLogin)){
+            userLogin.setToken("token");
+        }
+        return userLogin;
+    }
 
     @PostMapping("/email")
     Email sendEmail(@RequestBody Email email) {
