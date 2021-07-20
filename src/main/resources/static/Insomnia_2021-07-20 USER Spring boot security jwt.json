@@ -1,0 +1,301 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-07-20T19:00:10.667Z",
+  "__export_source": "insomnia.desktop.app:v2021.4.1",
+  "resources": [
+    {
+      "_id": "req_9ab9c2241dfd4c5485f4e70a51e0f3d7",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626806976030,
+      "created": 1626806842848,
+      "url": "http://localhost:8080/token/generate-token",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"elton\",\n  \"password\": \"password\"\n}"
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c199f694dfb645079ae35535a2d945a1"
+        }
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626806842848,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "parentId": "wrk_3310a28a4c674da6b7a6f7810b953aef",
+      "modified": 1626402545014,
+      "created": 1626402545014,
+      "name": "ProjectUserIA",
+      "description": "",
+      "environment": {
+
+      },
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1626402545014,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_3310a28a4c674da6b7a6f7810b953aef",
+      "parentId": null,
+      "modified": 1626402507604,
+      "created": 1626402507604,
+      "name": "Insomnia",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_95ada0c2505348c99e134d0d68f5c0ba",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626403179155,
+      "created": 1626403167471,
+      "url": "http://localhost:8080/users/4",
+      "name": "Remover Usuario",
+      "description": "",
+      "method": "DELETE",
+      "body": {
+
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626403167471,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_1d68f0fabeda4f1eacabe963c7bbdad6",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626403131441,
+      "created": 1626403096135,
+      "url": "http://localhost:8080/users/4",
+      "name": "Alterar usuario",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Usuario Alterado\",\n    \"login\": \"alterado\",\n    \"password\": \"12345\",\n    \"email\": \"eltilopes@gmail.com\",\n    \"admin\": false\n  }"
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_08c2105510a14d869dbf0203d5551417"
+        }
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626403096135,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_496e98e264fb49418f511cb10d87eaf4",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626402913401,
+      "created": 1626402833737,
+      "url": "http://localhost:8080/users",
+      "name": "Novo Usuario",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n    \"name\": \"Usuario Teste\",\n    \"login\": \"teste\",\n    \"password\": \"12345\",\n    \"email\": \"eltilopes@gmail.com\",\n    \"admin\": false\n  }"
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_394842ec09124c198f884fbf56264624"
+        }
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626402833737,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b63b3acb9be24c66b8a5ebfc2cc99ab4",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626402727622,
+      "created": 1626402706650,
+      "url": "http://localhost:8080/users",
+      "name": "Usuarios",
+      "description": "",
+      "method": "GET",
+      "body": {
+
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626402582521,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_87c45b8da1724b39a0cd5ffc13cbd8f7",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626457787333,
+      "created": 1626403031306,
+      "url": "http://localhost:8080/users/2",
+      "name": "Usuario por ID",
+      "description": "",
+      "method": "GET",
+      "body": {
+
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626402582496,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_e1508c3530b2480aa1b82b9c614f4a64",
+      "parentId": "fld_aeebb39f3cf84e29a4ac34fe849d2eb4",
+      "modified": 1626402611996,
+      "created": 1626402582471,
+      "url": "http://localhost:8080/email",
+      "name": "Enviar Email",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "",
+        "text": "lalala"
+      },
+      "parameters": [
+
+      ],
+      "headers": [
+
+      ],
+      "authentication": {
+
+      },
+      "metaSortKey": -1626402582471,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_7cf921ded58676a70b802b74f54a0e9615a97999",
+      "parentId": "wrk_3310a28a4c674da6b7a6f7810b953aef",
+      "modified": 1626402507659,
+      "created": 1626402507659,
+      "name": "Base Environment",
+      "data": {
+
+      },
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1626402507659,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_7cf921ded58676a70b802b74f54a0e9615a97999",
+      "parentId": "wrk_3310a28a4c674da6b7a6f7810b953aef",
+      "modified": 1626402507662,
+      "created": 1626402507662,
+      "name": "Default Jar",
+      "cookies": [
+
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a42af1cf9e4d4d619cf3e25acdc5f1a9",
+      "parentId": "wrk_3310a28a4c674da6b7a6f7810b953aef",
+      "modified": 1626402507605,
+      "created": 1626402507605,
+      "fileName": "Insomnia",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
