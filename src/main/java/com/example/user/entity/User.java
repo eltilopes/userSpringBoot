@@ -1,6 +1,8 @@
 package com.example.user.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,6 +19,7 @@ public class User {
     @Column(nullable = false)
     private String login;
 
+    @JsonIgnore
     @Column(nullable = false)
     private String password;
 

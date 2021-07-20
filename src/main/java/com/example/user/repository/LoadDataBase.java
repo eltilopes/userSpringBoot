@@ -17,9 +17,9 @@ class LoadDatabase {
     CommandLineRunner initDatabase(UserRepository repository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(new User("Mirella Nobrega", "mirella", "12345", "eltilopes@gmail.com", false)));
-            log.info("Preloading " + repository.save(new User("Melissa Lopes", "melissa", "12345", "eltilopes@gmail.com", false)));
-            log.info("Preloading " + repository.save(new User("Elton Lopes", "elton", "12345", "eltilopes@gmail.com", true)));
+            log.info("Preloading " + repository.save(new User("Mirella Nobrega", "mirella", "$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu", "eltilopes@gmail.com", false)));
+            log.info("Preloading " + repository.save(new User("Melissa Lopes", "melissa", "$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu", "eltilopes@gmail.com", false)));
+            log.info("Preloading " + repository.save(new User("Elton Lopes", "elton", "$2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKuelton", "eltilopes@gmail.com", true)));
         };
     }
 }
