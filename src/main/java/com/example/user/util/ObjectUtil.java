@@ -1,5 +1,9 @@
 package com.example.user.util;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+
 import java.util.List;
 
 public class ObjectUtil {
@@ -27,4 +31,10 @@ public class ObjectUtil {
 
         return false;
     }
+
+    public static String getJsonFromObject(Object objeto) throws JsonProcessingException {
+        ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+        return ow.writeValueAsString(objeto);
+    }
+
 }
