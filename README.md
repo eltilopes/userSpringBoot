@@ -1,6 +1,8 @@
 # userSpringBoot 
 
-### "Subir Redis e RabbitMq antes de subir o projeto "
+### Subir Redis e RabbitMq antes de subir o projeto 
+### Deixei aqui alguns links de tutoriais que utilizei ou iria utilizar para implementar as funcionalidades solicitadas
+### Existe um arquivo.json de uma documentação da api : src/main/resources/static/Insomnia_user_spring_boot_security_jwt.json 
 
 ## Spring Security JWT
 Implementado : JwtAuthenticationFilter , AuthenticationController , ...
@@ -43,3 +45,13 @@ https://www.programmersought.com/article/5692650956/ (configClass... mais arquit
 https://spring.io/guides/gs/messaging-rabbitmq/ (hello)
 https://medium.com/@jvoliveiran/spring-cloud-stream-simplificando-o-uso-de-message-broker-71f1731f5f5 (hello)
 https://www.youtube.com/watch?v=gaLmPqrm5LI 
+
+
+Criei a regra para controlar o envio de emails e postar na fila do rabbitMq.
+Esxiste uma classe chamada Runner que faz esse envio teste para a fila.
+
+
+Sei que o solicitado ficou em consumir a fila de outro sistema com rabbitMq ou Kafka(na descrição do teste.pdf isso ficou confuso)
+Porem por questao de tempo mesmo nao consegui implementar essa parte e o envio de email
+##Envio de Email
+https://www.baeldung.com/spring-email
