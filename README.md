@@ -50,6 +50,7 @@ https://www.youtube.com/watch?v=gaLmPqrm5LI
 Criei a regra para controlar o envio de emails e postar na fila do rabbitMq.
 Esxiste uma classe chamada Runner que faz esse envio teste para a fila.
 
+Criado docker-compose.yml para a dockerização do RabbitMq
 
 Sei que o solicitado ficou em consumir a fila de outro sistema com rabbitMq ou Kafka(na descrição do teste.pdf isso ficou confuso)
 Porem por questao de tempo mesmo nao consegui implementar essa parte e o envio de email
