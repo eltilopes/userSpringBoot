@@ -15,6 +15,7 @@ public interface UserService {
     User findOne(String username);
 
     User findById(long id);
+    List<User> findAllAdmin(Boolean admin);
 
     UserTO update(UserTO userDto);
 

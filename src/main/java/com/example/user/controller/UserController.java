@@ -9,11 +9,13 @@ import com.example.user.entity.Email;
 import com.example.user.entity.User;
 import com.example.user.exception.UserEmptyException;
 import com.example.user.exception.UserNotFoundException;
+import com.example.user.rabbitmq.service.EmailService;
 import com.example.user.repository.UserRepository;
 import com.example.user.util.ObjectUtil;
 import com.sun.xml.bind.v2.schemagen.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +29,9 @@ class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
     private final UserRepository repository;
+
+    @Autowired
+    EmailService emailService;
 
     UserController(UserRepository repository) {
         this.repository = repository;
@@ -67,8 +72,9 @@ class UserController {
     }
 
     @PostMapping("/email")
-    Email sendEmail(@RequestBody Email email) {
+    Email sendEmail(@RequestBody Email email) throws Exception {
         log.info("Enviar Email - Mensagem: '" + email.getMessage() + "'");
+        emailService.sendEmail(email);
         return email;
     }
 

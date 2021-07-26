@@ -47,6 +47,12 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         return list;
     }
 
+    public List<User> findAllAdmin(Boolean admin) {
+        List<User> list = new ArrayList<>();
+        userDao.findByAdmin(admin).iterator().forEachRemaining(list::add);
+        return list;
+    }
+
     @Override
     public void delete(long id) {
         userDao.deleteById(id);
